@@ -2,7 +2,7 @@
 """
 Created on Sat Apr  1 11:49:55 2023
 
-@author: shani
+@author: Dilpa
 """
 
 import numpy as np
@@ -10,7 +10,7 @@ import pickle
 import streamlit as st
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/shani/Desktop/DilpaAgriv/WebApp/RFTrained.pkl', 'rb'))
+loaded_model = pickle.load(open('RFTrained.pkl', 'rb'))
 
 #creating a function for prediction
 
