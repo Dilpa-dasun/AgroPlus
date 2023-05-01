@@ -5,7 +5,7 @@ import streamlit as st
 import pandas as pd
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/shani/Desktop/DilpaAgriv/WebApp/Yield/RFYiledPredictionTrained.pkl', 'rb'))
+loaded_model = pickle.load(open('RFYiledPredictionTrained.pkl', 'rb'))
 
 #creating a function for prediction
 
