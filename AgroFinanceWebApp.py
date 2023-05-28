@@ -1,10 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Apr  1 17:27:00 2023
-
-@author: shani
-"""
-
+#importing libraries
 import numpy as np
 import pickle
 import streamlit as st
@@ -22,6 +16,7 @@ def main():
     df1 = pd.DataFrame(data1)
     st.dataframe(df1)
     
+    #input selection parameters
     SeedTpype = st.selectbox('Select Crop', ('Carrot', 'Garlic', 'Potatoes', 'Sweet Potatoes','Wheat', 'Ginger','Onions'))
     YieldType = st.selectbox('Select Yield Class per above legend', ('Lower-Low', 'Low', 'Upper-Low ', 'Lower-Mid', 'Mid', 'Upper-Mid', 'Lower-High', 'High','Upper-High'))
     LandArea = st.number_input('Enter land area in hectare(ha)')
