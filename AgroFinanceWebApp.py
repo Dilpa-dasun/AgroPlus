@@ -277,23 +277,23 @@ def main():
         SeedCost = 0
         #UnitPirce = 0
     
-        
-    PredictedPesticideCost = PesticideCost*PestAmt
-    #SeedCost = SeedCost
-    #TrasnportionCost = TrasnportionCost
     
+    #calculating costs
+    PredictedPesticideCost = PesticideCost*PestAmt
+       
     TotalCost = PredictedPesticideCost + SeedCost + TransportationCost
      
+    #calculating yeild income
     YieldIncome = ((YieldAmt*LandArea)/10)*UnitPrice
     AvgYieldIncome = ((AvgYield*LandArea)/10)*UnitPrice
+    #calculating totol profit
     TotalProfit = YieldIncome - TotalCost
     
     # Define the Output data
     data2 = {'Item': ['Predicted Pesticide Cost', 'Seed Cost', 'Trasnportation Cost', 'Total Cost','Yield Income','Total Profit'],
         'Cost(Rs)': [PredictedPesticideCost,SeedCost,TransportationCost,TotalCost,YieldIncome,TotalProfit]}    
     df2 = pd.DataFrame(data2)
-       
-    #st.metric(label="Total Yield Income", value=YieldIncome, delta= AvgYieldIncome)
+    
     
     result_container = st.empty()
     #creating a button
@@ -301,10 +301,7 @@ def main():
         result_container.text(st.dataframe(df2))
     
     #strategies  
-    #creating a button
-   
-    # Define the Output data
-           
+          
     
     if SeedTpype == 'Carrot' :
         if TotalProfit > 0:
